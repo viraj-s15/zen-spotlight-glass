@@ -2,7 +2,11 @@
 
 A `userChrome.css` that makes the floating URL bar in Zen Browser look like the glass Spotlight bar in macOS. It follows the light or dark theme of the system.
 
-Tested on Zen 1.24.1b (Firefox 152) on macOS.
+Last tested on Zen 1.24.1b (Firefox 152) on macOS.
+
+## Looks
+
+![Transparent Seach Bar](image_1.png)
 
 ## Install
 
@@ -19,10 +23,10 @@ Tested on Zen 1.24.1b (Firefox 152) on macOS.
 
 Change the variables in the `:root` block at the top of `userChrome.css`.
 
-| Variable | Default | What it changes |
-| --- | --- | --- |
-| `--spot-glass` | 35% tint | The glass color. A higher alpha makes the glass more solid. |
+| Variable          | Default   | What it changes                                                                                                                                      |
+| ----------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--spot-glass`    | 35% tint  | The glass color. A higher alpha makes the glass more solid.                                                                                          |
 | `--spot-selected` | `#0a84ff` | The selected row. For a grey pill, use `light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.12))` and set `--spot-selected-text` to `currentColor`. |
-| `--spot-width` | `680px` | The width of the bar. |
-| `--spot-top` | `22vh` | The distance from the top of the window. |
-| `--spot-radius` | `24px` | The corner radius of the bar. |
+| `--spot-width`    | `680px`   | The width of the bar.                                                                                                                                |
+| `--spot-top`      | `22vh`    | The distance from the top of the window.                                                                                                             |
+| `--spot-radius`   | `24px`    | The corner radius of the bar.                                                                                                                        |
