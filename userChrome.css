@@ -1,0 +1,82 @@
+:root {
+  --spot-glass: light-dark(rgba(235, 240, 248, 0.35), rgba(30, 30, 34, 0.35));
+  --spot-edge: light-dark(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.14));
+  --spot-separator: light-dark(rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.14));
+  --spot-hover: light-dark(rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.06));
+  --spot-text: light-dark(rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0.92));
+  --spot-dim: light-dark(rgba(0, 0, 0, 0.45), rgba(255, 255, 255, 0.5));
+  --spot-selected: #0a84ff;
+  --spot-selected-text: white;
+
+  --spot-width: 680px;
+  --spot-top: 22vh;
+  --spot-radius: 24px;
+  --spot-row-radius: 12px;
+}
+
+#urlbar[open][zen-floating-urlbar="true"] {
+  --zen-urlbar-width: min(90%, var(--spot-width)) !important;
+  --zen-urlbar-top: var(--spot-top) !important;
+  --urlbar-container-height: 56px !important;
+  --urlbarview-separator-color: var(--spot-separator) !important;
+  font-size: 1.45em !important;
+
+  &,
+  & .urlbar-background {
+    border-radius: var(--spot-radius) !important;
+  }
+
+  & .urlbar-background {
+    background-color: var(--spot-glass) !important;
+    backdrop-filter: blur(60px) saturate(190%) brightness(1.05) !important;
+    outline: 0.5px solid var(--spot-edge) !important;
+    box-shadow:
+      inset 0 1px 0 var(--spot-edge),
+      0 24px 70px -10px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  & .urlbar-input {
+    color: var(--spot-text) !important;
+
+    &::placeholder {
+      color: var(--spot-dim) !important;
+    }
+  }
+
+  & .urlbarView-row {
+    border-radius: var(--spot-row-radius) !important;
+    color: var(--spot-text) !important;
+
+    & .urlbarView-url,
+    & .urlbarView-title-separator::before,
+    & .urlbarView-action {
+      color: var(--spot-dim) !important;
+    }
+
+    &:hover:not([selected]),
+    &:hover:not([selected]) .urlbarView-favicon {
+      background-color: var(--spot-hover) !important;
+    }
+
+    &[selected] {
+      background-color: var(--spot-selected) !important;
+
+      & *,
+      & .urlbarView-title-separator::before {
+        color: var(--spot-selected-text) !important;
+      }
+    }
+  }
+
+  & .urlbarView-title,
+  & .urlbarView-url,
+  & .urlbarView-title-separator::before {
+    font-size: 13.5px !important;
+  }
+
+  & .urlbarView-favicon {
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 6px !important;
+  }
+}
