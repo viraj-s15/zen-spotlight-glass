@@ -23,10 +23,12 @@ Last tested on Zen 1.24.1b (Firefox 152) on macOS.
 
 Change the variables in the `:root` block at the top of `userChrome.css`.
 
-| Variable          | Default   | What it changes                                                                                                                                      |
-| ----------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--spot-glass`    | 35% tint  | The glass color. A higher alpha makes the glass more solid.                                                                                          |
-| `--spot-selected` | `#0a84ff` | The selected row. For a grey pill, use `light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.12))` and set `--spot-selected-text` to `currentColor`. |
-| `--spot-width`    | `680px`   | The width of the bar.                                                                                                                                |
-| `--spot-top`      | `22vh`    | The distance from the top of the window.                                                                                                             |
-| `--spot-radius`   | `24px`    | The corner radius of the bar.                                                                                                                        |
+| Variable                 | Default   | What it changes                                                                                                                                      |
+| ------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--spot-glass`           | 35% tint  | The glass color. A higher alpha makes the glass more solid.                                                                                          |
+| `--spot-selected`        | `#0a84ff` | The selected row. For a grey pill, use `light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.12))` and set `--spot-selected-text` to `currentColor`. |
+| `--spot-width`           | `680px`   | The width of the bar.                                                                                                                                |
+| `--spot-top`             | `22vh`    | The distance from the top of the window.                                                                                                             |
+| `--spot-radius`          | `24px`    | The corner radius of the bar.                                                                                                                        |
+| `--spot-open-duration`   | `180ms`   | The length of the pop-in when the bar opens. Set it to `0ms` to turn the pop-in off.                                                                 |
+| `--spot-select-duration` | `120ms`   | The length of the fade on the selected row and the hover color.                                                                                      |
